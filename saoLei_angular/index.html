@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="saoLei">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>game</title>
+    <script src="./node_modules/angular/angular.js"></script>
+    <script src="./js/modules.js"></script>
+    <script src="./js/controllers.js"></script>
+    <script src="./js/directives.js"></script>
+    <script src="./js/service.js"></script>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <div ng-controller="saoLeiController">
+        <table class="sao-lei" border="1" cellspacing="0" cellpadding="0">
+            <tr ng-repeat="row in saoLeiBox.rows">
+                <td ng-repeat="spot in row.spots" ng-click="uncoverSpot(spot)" ng-right-click="setFlag(spot)">
+                    <mine-grid></mine-grid>
+                </td>
+            </tr>
+        </table>
+        <div style="height:70px;overflow:hidden;">
+            <p class="text-success" ng-show="isWin">恭喜你，游戏胜利！</p>
+            <p class="text-success" ng-show="isLost">很遗憾，游戏失败！</p>
+        </div>
+        <button class="btn btn-primary" ng-click="restart()">重新开始</button>
+    </div>
+</body>
+</html>

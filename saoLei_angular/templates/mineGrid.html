@@ -1,0 +1,13 @@
+<img class="cover-img" src="images/covered.jpg" ng-if="spot.isCovered && spot.flag == 'none'" />
+<img class="cover-img" src="images/empty.jpg" ng-if="!spot.isCovered && spot.content == 'empty'" />
+<img class="cover-img" src="images/mine.jpg" ng-if="!spot.isCovered && spot.content == 'mine'" />
+<img class="cover-img" src="images/1.jpg" ng-if="!spot.isCovered && spot.content == '1'" />
+<img class="cover-img" src="images/2.jpg" ng-if="!spot.isCovered && spot.content == '2'" />
+<img class="cover-img" src="images/3.jpg" ng-if="!spot.isCovered && spot.content == '3'" />
+<img class="cover-img" src="images/4.jpg" ng-if="!spot.isCovered && spot.content == '4'" />
+<img class="cover-img" src="images/5.jpg" ng-if="!spot.isCovered && spot.content == '5'" />
+<img class="cover-img" src="images/6.jpg" ng-if="!spot.isCovered && spot.content == '6'" />
+<img class="cover-img" src="images/7.jpg" ng-if="!spot.isCovered && spot.content == '7'" />
+<img class="cover-img" src="images/8.jpg" ng-if="!spot.isCovered && spot.content == '8'" />
+<img class="cover-img" src="images/flag_mine.jpg" ng-if="spot.isCovered && spot.flag == 'mine'" />
+<img class="cover-img" src="images/flag_suspect.jpg" ng-if="spot.isCovered && spot.flag == 'suspect'" />
